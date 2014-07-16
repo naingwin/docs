@@ -15,21 +15,22 @@
 <a name="introduction"></a>
 ## Introduction
 
+Laravel ရဲ့ `Schema` class 
 The Laravel `Schema` class provides a database agnostic way of manipulating tables. It works well with all of the databases supported by Laravel, and has a unified API across all of these systems.
 
 <a name="creating-and-dropping-tables"></a>
 ## Creating & Dropping Tables
 
-To create a new database table, the `Schema::create` method is used:
+Table တစ္ခုအသစ္ျပဳလုပ္ဖို႔အတြက္ `Schema:create` method ကိုအသံုးျပဳပါတယ္။
 
 	Schema::create('users', function($table)
 	{
 		$table->increments('id');
 	});
 
-The first argument passed to the `create` method is the name of the table, and the second is a `Closure` which will receive a `Blueprint` object which may be used to define the new table.
+အေပၚက ဥပမာမွာ 'users' ဆိုတဲ့ ပထမ argument ဟာ အသစ္ျပဳလုပ္မဲ့ table ရဲ့အမည္ျဖစ္ပါတယ္။ ဒုတိယ argument ကေတာ့ `Closure` ျဖစ္ၿပီးေတာ့ table အသစ္ျပဳလုပ္ရာမွာ လိုအပ္မဲ့ `Blueprint` object ကိုလက္ခံေဆာင္ရြက္ေပးမွာပါ။ 
 
-To rename an existing database table, the `rename` method may be used:
+ရွိၿပီးသား database table ကို နာမည္ျပန္ေျပာင္းခ်င္ရင္ `rename` method ကို အသံုးျပဳႏိုင္ပါတယ္။ 
 
 	Schema::rename($from, $to);
 
